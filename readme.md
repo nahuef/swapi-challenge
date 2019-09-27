@@ -28,6 +28,7 @@ Implemented (and commented) there are a few custom metrics (with custom tags) th
 ### Deployment
 Could be done using feature branching during development and having a Continuos Integration & Continuos Deployment (CI/CD) service such as [Codeship](https://codeship.com/) and having different steps trigger once a merge is done against master.
 Ideally, once a push is made into any branch a CI build will be started to verify code integrity, that is, complies with the linting and styling standard, has unit & integration tests and code coverage is above the minimun required (if applies).
+
 Only then, and with the required code reviewers approvals, the PR will be able to be merged into a master or production branch.
 When merging into master another build will be triggered and this time a new step for deployment will be executed, if we have a serverless stack such as [AWS Lambdas](https://aws.amazon.com/lambda/) it could be done with [Serverless Framework](https://serverless.com/) having a bash command similar to `sls package` `sls deploy` be executed and our Infrastructure as code configuration (Serverless yml) will determine what will be deployed. Or [AWS CodePipeline](https://aws.amazon.com/codepipeline/).
 Other resources could also be deployed in this CD step using frameworks like [Terraform](https://www.terraform.io/) or [AWS CloudFormation](https://aws.amazon.com/cloudformation/).
