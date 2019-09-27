@@ -8,8 +8,8 @@ npm start
 By default server will listen on port 3000 at localhost: `http://localhost:3000`
 
 ###  Available endpoints
-```http://localhost:3000/people/``` To get every Star Wars character.
-```http://localhost:3000/people/:id``` To get an specific character using its id number.
+- ```http://localhost:3000/people/``` To get every Star Wars character.
+- ```http://localhost:3000/people/:id``` To get an specific character using its id number.
 
 ### Logging
 Is implemented in three different levels with `winston`, one level for use case.
