@@ -58,7 +58,7 @@ async function peopleById (req, res, next) {
     return res
       .status(200)
       .json({
-        ...id,
+        ...{ id: id },
         ...character
       })
   } catch (error) { next(error) }
